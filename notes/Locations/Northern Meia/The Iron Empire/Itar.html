@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Itar - Meia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="Meia" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <meta property="og:description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <link rel="canonical" href="http://localhost:4000/" />
+  <meta property="og:url" content="http://localhost:4000/" />
+  <meta property="og:site_name" content="Meia" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Meia" />
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Meia","name":"Meia","url":"http://localhost:4000/"}</script>
+  <!-- End Jekyll SEO tag -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Meia" />
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Meia</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path
+                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+            </svg>
+          </span>
+        </label>
+        <div style="display: flex; gap: 1rem;">
+          <div class="trigger"><a class="page-link" href="/notes">All Notes</a></div>
+          <div class="trigger"><a class="page-link" href="/settlements">Settlements</a></div>
+          <div class="trigger"><a class="page-link" href="/characters">Characters</a></div>
+          <div class="trigger"><a class="page-link" href="/lore">Lore</a></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content" aria-label="Content">
+    <article>
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <h1 style="margin-bottom: 0.5rem;">Itar</h1>
+      
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+    </div>
+    <small>
+      <em>
+        <time datetime="">
+          Last updated on 
+          
+        </time>
+      </em>
+    </small>
+  </div>
+
+  <div id="notes-entry-container">
+    <content>
+      <span id="demographics" style="display: none;">Human 40%, Elf 20%, Dwarf 25%, Other 15%</span>
+<div style="overflow-x: auto">
+  <table>
+    <tbody>
+    
+    <tr>
+      <td>Population</td>
+      <td>10,000-11,000</td>
+    </tr>
+    
+  
+    
+    <tr>
+      <td>Demographics</td>
+      <td>
+        <div id="demographic-graph">
+        </div>
+      </td>
+    </tr>
+    
+    
+    
+    <tr>
+      <td>Region</td>
+      <td>Iron Empire</td>
+    </tr>
+    
+  </tbody>
+  </table>
+</div>
+
+
+
+
+
+<script>
+  var demographics = document.getElementById('demographics').innerText
+  var graph = document.getElementById('demographic-graph')
+  console.log(demographics.split(', '))
+  demographics.split(', ').forEach((demographic, index) => {
+    const name = demographic.split(' ')[0]
+    const percentage = demographic.split(' ')[1]
+
+    const div = document.createElement('div')
+    div.id = `demographic_${index}`
+    div.classList = [`demographic-segment`]
+    div.style.width = percentage;
+    div.innerText = demographic;
+    div.title = demographic;
+    graph.append(div)
+  })
+</script>
+
+<style>
+  #demographic-graph {
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    min-width: 20rem;
+    display: flex;
+    overflow: hidden;
+  }
+  .demographic-segment {
+    height: 1rem;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #00000099;
+  }
+  #demographic_0 {
+    background-color: #AFF8DB;
+  }
+  #demographic_1 {
+    background-color: #85E3FF;
+  }
+  #demographic_2 {
+    background-color: #FFABAB;
+  }
+  #demographic_3 {
+    background-color: #B28DFF;
+  }
+  #demographic_4 {
+    background-color: #AFF8DB;
+  }
+  #demographic_5 {
+    background-color: #85E3FF;
+  }
+  #demographic_6 {
+    background-color: #FFABAB;
+  }
+  #demographic_7 {
+    background-color: #B28DFF;
+  }
+</style>
+    </content>
+
+    <hr>
+    <side style="font-size: 0.9em">
+      <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
+      
+
+      <div style="font-size: 0.9em">
+        <p>
+          There are no notes linking to this note.
+        </p>
+      </div>
+      
+    </side>
+  </div>
+</article>
+  </main>
+  <!-- That file is not particularly elegant. This will need a refactor at some point. -->
+<style>
+  content a.internal-link {
+    border-color: #8b88e6;
+    background-color: #efefff;
+  }
+
+  #tooltip-wrapper {
+    background: white;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    font-size: 0.8em;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 100ms;
+  }
+
+  #tooltip-wrapper:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		pointer-events: none;
+		background-image: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%);
+		width: 100%;
+		height: 75px;
+  }
+</style>
+
+<div style="opacity: 0; display: none;" id='tooltip-wrapper'>
+  <div id='tooltip-content'>
+  </div>
+</div>
+
+<iframe style="display: none; height: 0; width: 0;" id='link-preview-iframe' src="">
+</iframe>
+
+<script>
+  var opacityTimeout;
+  var contentTimeout;
+  var transitionDurationMs = 100;
+
+  var iframe = document.getElementById('link-preview-iframe')
+  var tooltipWrapper = document.getElementById('tooltip-wrapper')
+  var tooltipContent = document.getElementById('tooltip-content')
+
+  var linkHistories = {};
+
+  function hideTooltip() {
+    opacityTimeout = setTimeout(function() {
+      tooltipWrapper.style.opacity = 0;
+      contentTimeout = setTimeout(function() {
+        tooltipContent.innerHTML = '';
+        tooltipWrapper.style.display = 'none';
+      }, transitionDurationMs + 1);
+    }, transitionDurationMs)
+  }
+
+  function showTooltip(event) {
+    var elem = event.target;
+    var elem_props = elem.getClientRects()[elem.getClientRects().length - 1];
+    var top = window.pageYOffset || document.documentElement.scrollTop
+
+    if (event.target.host === window.location.host) {
+      if (!linkHistories[event.target.href]) {
+        iframe.src = event.target.href
+        iframe.onload = function() {
+          tooltipContentHtml = ''
+          tooltipContentHtml += '<div style="font-weight: bold;">' + iframe.contentWindow.document.querySelector('h1').innerHTML + '</div>'
+          tooltipContentHtml += iframe.contentWindow.document.querySelector('content').innerHTML
+
+          tooltipContent.innerHTML = tooltipContentHtml
+          linkHistories[event.target.href] = tooltipContentHtml
+
+          tooltipWrapper.style.display = 'block';
+          setTimeout(function() {
+            tooltipWrapper.style.opacity = 1;
+          }, 1)
+        } 
+      } else {
+        tooltipContent.innerHTML = linkHistories[event.target.href]
+        tooltipWrapper.style.display = 'block';
+        setTimeout(function() {
+          tooltipWrapper.style.opacity = 1;
+        }, 1)
+      }
+
+
+      tooltipWrapper.style.left = elem_props.left - (tooltipWrapper.offsetWidth / 2) + (elem_props.width / 2) + "px";
+      if ((window.innerHeight - elem_props.top) < (tooltipWrapper.offsetHeight)) {
+          tooltipWrapper.style.top = elem_props.top + top - tooltipWrapper.offsetHeight - 10 + "px";
+      } else if ((window.innerHeight - elem_props.top) > (tooltipWrapper.offsetHeight)) {
+          tooltipWrapper.style.top = elem_props.top + top + 35 + "px";
+      }
+
+      if ((elem_props.left + (elem_props.width / 2)) < (tooltipWrapper.offsetWidth / 2)) {
+          tooltipWrapper.style.left = "10px";
+      } else if ((document.body.clientWidth - elem_props.left - (elem_props.width / 2)) < (tooltipWrapper.offsetWidth / 2)) {
+          tooltipWrapper.style.left = document.body.clientWidth - tooltipWrapper.offsetWidth - 20 + "px";
+      }
+    }
+  }
+
+  function setupListeners(linkElement) {
+    linkElement.addEventListener('mouseleave', function(_event) {
+      hideTooltip();
+    });
+
+    tooltipWrapper.addEventListener('mouseleave', function(_event) {
+      hideTooltip();
+    });
+
+    linkElement.addEventListener('touchend', function(_event) {
+      hideTooltip();
+    });
+
+    tooltipWrapper.addEventListener('touchend', function(_event) {
+      hideTooltip();
+    });
+
+    linkElement.addEventListener('mouseenter', function(event) {
+      clearTimeout(opacityTimeout);
+      clearTimeout(contentTimeout);
+      showTooltip(event);
+    });
+
+    tooltipWrapper.addEventListener('mouseenter', function(event) {
+      clearTimeout(opacityTimeout);
+      clearTimeout(contentTimeout);
+    });
+  }
+
+  document.querySelectorAll('content a').forEach(setupListeners);
+</script>
+
+
+</body>
+
+</html>
