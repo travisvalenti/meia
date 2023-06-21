@@ -24,13 +24,47 @@
   <!-- End Jekyll SEO tag -->
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Meia" />
+  <style>
+    #nav-items {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 600px) {
+      .page-content {
+        margin: 0;
+        padding: 0;
+      }
+      #nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 0;
+        height: 0;
+      }
+      #nav-items.shown {
+        width: 100%;
+        height: auto;
+      }
+      #nav-items > .trigger {
+        overflow: hidden;
+        transition: max-height 0.5s ease-out,
+          max-width 0.5s ease-out;  
+        max-height: 0;
+        max-width: 100%;
+      }
+      #nav-items.shown > .trigger {
+        max-height: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header class="site-header" role="banner">
     <div class="wrapper"><a class="site-title" rel="author" href="/">Meia</a>
       <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <input type="checkbox" id="nav-trigger" class="nav-trigger"/>
         <label for="nav-trigger">
           <span class="menu-icon">
             <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -39,7 +73,7 @@
             </svg>
           </span>
         </label>
-        <div style="display: flex; gap: 1rem;">
+        <div id="nav-items">
           <div class="trigger"><a class="page-link" href="/notes">All Notes</a></div>
           <div class="trigger"><a class="page-link" href="/settlements">Settlements</a></div>
           <div class="trigger"><a class="page-link" href="/characters">Characters</a></div>
@@ -50,90 +84,15 @@
     </div>
   </header>
   <main class="page-content" aria-label="Content">
-    <div style="display: flex; gap: 1rem; flex-direction: column;">
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <a class="link-card" href="/notes/Locations/Northern%20Meia/Delastrin%20Range/Keel%20Narrock.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Keel Narrock</h2>
-            
-  <div class="tag done">Done</div>
+    <div style="text-align: center; background-color: white; border-radius: 2px; margin-top: 10px; padding: 10px;">
+  <h2 style="margin: 0;">Settlements</h2>
+  <small><em>Sorted alphabetically by file name.</em></small>
+</div>
+<br/>
 
 
-  <div class="tag">Settlement</div>
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-            <em>
-              Delastrin Range
-            </em>
-          
-          
-            <div>
-              Unknown residents
-            </div>
-          
-        </div>
-      </a>
+<div style="display: flex; gap: 1rem; flex-direction: column;">
+  
     
   
     
@@ -141,219 +100,7 @@
     
   
     
-      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Eversteel.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Eversteel</h2>
-            
-  <div class="tag notdone">Not Done</div>
-
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-          
-        </div>
-      </a>
-    
   
-    
-  
-    
-      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Itar.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Itar</h2>
-            
-  <div class="tag done">Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-            <em>
-              Iron Empire
-            </em>
-          
-          
-            <div>
-              10,000-11,000 residents
-            </div>
-          
-        </div>
-      </a>
-    
-  
-    
-      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Kesserhollow.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Kesserhollow</h2>
-            
-  <div class="tag done">Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-            <em>
-              Iron Empire
-            </em>
-          
-          
-            <div>
-              400-500 residents
-            </div>
-          
-        </div>
-      </a>
-    
-  
-    
-  
-    
-  
-    
-      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/Manahelm.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Manahelm</h2>
-            
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-            <em>
-              Iron Empire
-            </em>
-          
-          
-            <div>
-              60,000-75,000 residents
-            </div>
-          
-        </div>
-      </a>
-    
-  
-    
-      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/Tallowbrook.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Tallowbrook</h2>
-            
-  <div class="tag done">Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-            <em>
-              The Kingdom Of Mana
-            </em>
-          
-          
-            <div>
-              850 residents
-            </div>
-          
-        </div>
-      </a>
-    
-  
-    
-  
-    
-  
-    
-      <a class="link-card" href="/notes/Locations/Northern%20Meia/Vil%20Taroth/Ember%20Hills.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Ember Hills</h2>
-            
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-            <em>
-              Vil Taroth
-            </em>
-          
-          
-            <div>
-              1000-1500 residents
-            </div>
-          
-        </div>
-      </a>
     
   
     
@@ -382,8 +129,8 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -394,8 +141,6 @@
           
         </div>
       </a>
-    
-  
     
   
     
@@ -416,8 +161,8 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-05-08T12:40:38+10:00">
-                Last updated on May 8, 2023
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -442,6 +187,302 @@
   
     
   
+    
+  
+    
+  
+    
+      <a class="link-card" href="/notes/Locations/Northern%20Meia/Vil%20Taroth/Ember%20Hills.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Ember Hills</h2>
+            
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+            <em>
+              Vil Taroth
+            </em>
+          
+          
+            <div>
+              1000-1500 residents
+            </div>
+          
+        </div>
+      </a>
+    
+  
+    
+      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Eversteel.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Eversteel</h2>
+            
+  <div class="tag notdone">Not Done</div>
+
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+          
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Itar.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Itar</h2>
+            
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+            <em>
+              Iron Empire
+            </em>
+          
+          
+            <div>
+              10,000-11,000 residents
+            </div>
+          
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+      <a class="link-card" href="/notes/Locations/Northern%20Meia/Delastrin%20Range/Keel%20Narrock.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Keel Narrock</h2>
+            
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+            <em>
+              Delastrin Range
+            </em>
+          
+          
+            <div>
+              Unknown residents
+            </div>
+          
+        </div>
+      </a>
+    
+  
+    
+      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Kesserhollow.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Kesserhollow</h2>
+            
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+            <em>
+              Iron Empire
+            </em>
+          
+          
+            <div>
+              400-500 residents
+            </div>
+          
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/Manahelm.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Manahelm</h2>
+            
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+            <em>
+              Iron Empire
+            </em>
+          
+          
+            <div>
+              60,000-75,000 residents
+            </div>
+          
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/Tallowbrook.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Tallowbrook</h2>
+            
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:25:42+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+            <em>
+              The Kingdom Of Mana
+            </em>
+          
+          
+            <div>
+              850 residents
+            </div>
+          
+        </div>
+      </a>
     
   
     
@@ -641,6 +682,15 @@
 </script>
 
 
+  <script>
+    const navItems = document.getElementById('nav-items')
+    document.getElementById('nav-trigger').onchange = event => {
+      console.log(event.target.value)
+      navItems.className = event.target.checked
+        ? 'shown'
+        : '';
+    }
+  </script>
 </body>
 
 </html>

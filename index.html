@@ -24,13 +24,47 @@
   <!-- End Jekyll SEO tag -->
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Meia" />
+  <style>
+    #nav-items {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 600px) {
+      .page-content {
+        margin: 0;
+        padding: 0;
+      }
+      #nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 0;
+        height: 0;
+      }
+      #nav-items.shown {
+        width: 100%;
+        height: auto;
+      }
+      #nav-items > .trigger {
+        overflow: hidden;
+        transition: max-height 0.5s ease-out,
+          max-width 0.5s ease-out;  
+        max-height: 0;
+        max-width: 100%;
+      }
+      #nav-items.shown > .trigger {
+        max-height: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header class="site-header" role="banner">
     <div class="wrapper"><a class="site-title" rel="author" href="/">Meia</a>
       <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <input type="checkbox" id="nav-trigger" class="nav-trigger"/>
         <label for="nav-trigger">
           <span class="menu-icon">
             <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -39,7 +73,7 @@
             </svg>
           </span>
         </label>
-        <div style="display: flex; gap: 1rem;">
+        <div id="nav-items">
           <div class="trigger"><a class="page-link" href="/notes">All Notes</a></div>
           <div class="trigger"><a class="page-link" href="/settlements">Settlements</a></div>
           <div class="trigger"><a class="page-link" href="/characters">Characters</a></div>
@@ -50,32 +84,380 @@
     </div>
   </header>
   <main class="page-content" aria-label="Content">
-    <h2>Recently Updated Notes</h2>
+    <div style="text-align: center; background-color: white; border-radius: 2px; margin-top: 10px; padding: 10px;">
+  <h2 style="margin: 0;">Recently Updated Notes</h2>
+  <small><em>Click <a href="/notes">'All Notes'</a> to see all notes.</em></small>
+</div>
+<br/>
 
-<ul>
+<div style="display: flex; flex-direction: column; flex-wrap: wrap; gap: 1rem;">
   
   
-    <li>
-      2023-06-19 — <a class="internal-link" href="/notes/Religions/The%20Lights/Appelyn,%20the%20Traveler.html">Appelyn, the traveler</a>
-    </li>
+  <a class="link-card" href="/notes/Religions/The%20Lights/Appelyn,%20the%20Traveler.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Appelyn, the traveler</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
   
-    <li>
-      2023-06-19 — <a class="internal-link" href="/notes/Materials%20and%20Resources/Ember%20Flower.html">Ember flower</a>
-    </li>
+  <a class="link-card" href="/notes/Religions/The%20Lights.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">The lights</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
   
-    <li>
-      2023-06-19 — <a class="internal-link" href="/notes/Locations/The%20Dry%20Sea/Khai-hoteph.html">Khai Hoteph</a>
-    </li>
+  <a class="link-card" href="/notes/Religions/The%20Lights/Solarum,%20the%20golden%20light.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Solarum, the golden light</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
   
-    <li>
-      2023-05-17 — <a class="internal-link" href="/notes/Materials%20and%20Resources/Iron,%20Steel%20and%20Bronze.html">Iron, steel and bronze</a>
-    </li>
+  <a class="link-card" href="/notes/Religions/The%20Lights/Aleia,%20the%20Hunter.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Aleia, the hunter</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
   
-    <li>
-      2023-05-17 — <a class="internal-link" href="/notes/Materials%20and%20Resources/Nitre%20&%20Black%20Powder.html">Nitre & black powder</a>
-    </li>
+  <a class="link-card" href="/notes/Religions/The%20Lights/Valia,%20Vesille%20and%20Vyre.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Valia, vesille and vyre</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
   
-</ul>
+  <a class="link-card" href="/notes/Lore/The%20Origin%20of%20the%20World.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">The origin of the world</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Lore/The%20Sleeping%20Leviathans.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">The sleeping leviathans</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">stub</div>
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Lore/The%20Elves.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">The elves</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Lore/The%20Arcanic%20Method.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">The Arcanic Method</h2>
+        
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Lore</div>
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Lore/Souls%20and%20Spirits.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Souls and spirits</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Lore/Local%20Legends.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Local legends</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Materials%20and%20Resources/Aloe.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Aloe</h2>
+        
+  <div class="tag done">Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Locations/The%20Dry%20Sea/Khai-hoteph.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Khai Hoteph</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Materials%20and%20Resources/Ember%20Flower.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Ember flower</h2>
+        
+  <div class="tag notdone">Not Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+  <a class="link-card" href="/notes/Materials%20and%20Resources/Iron,%20Steel%20and%20Bronze.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="margin: 0;">Iron, steel and bronze</h2>
+        
+  <div class="tag done">Done</div>
+
+
+      </div>
+      <small>
+        <em>
+          <time datetime="2023-05-04T15:54:57+10:00">
+            Last updated on May 4, 2023
+            
+          </time>
+        </em>
+      </small>
+    </div>
+    <div style="text-align: right">
+      
+      
+    </div>
+  </a>
+  
+</div>
   </main>
   <!-- That file is not particularly elegant. This will need a refactor at some point. -->
 <style>
@@ -219,6 +601,15 @@
 </script>
 
 
+  <script>
+    const navItems = document.getElementById('nav-items')
+    document.getElementById('nav-trigger').onchange = event => {
+      console.log(event.target.value)
+      navItems.className = event.target.checked
+        ? 'shown'
+        : '';
+    }
+  </script>
 </body>
 
 </html>

@@ -24,13 +24,47 @@
   <!-- End Jekyll SEO tag -->
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Meia" />
+  <style>
+    #nav-items {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 600px) {
+      .page-content {
+        margin: 0;
+        padding: 0;
+      }
+      #nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 0;
+        height: 0;
+      }
+      #nav-items.shown {
+        width: 100%;
+        height: auto;
+      }
+      #nav-items > .trigger {
+        overflow: hidden;
+        transition: max-height 0.5s ease-out,
+          max-width 0.5s ease-out;  
+        max-height: 0;
+        max-width: 100%;
+      }
+      #nav-items.shown > .trigger {
+        max-height: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header class="site-header" role="banner">
     <div class="wrapper"><a class="site-title" rel="author" href="/">Meia</a>
       <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <input type="checkbox" id="nav-trigger" class="nav-trigger"/>
         <label for="nav-trigger">
           <span class="menu-icon">
             <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -39,7 +73,7 @@
             </svg>
           </span>
         </label>
-        <div style="display: flex; gap: 1rem;">
+        <div id="nav-items">
           <div class="trigger"><a class="page-link" href="/notes">All Notes</a></div>
           <div class="trigger"><a class="page-link" href="/settlements">Settlements</a></div>
           <div class="trigger"><a class="page-link" href="/characters">Characters</a></div>
@@ -50,8 +84,39 @@
     </div>
   </header>
   <main class="page-content" aria-label="Content">
-    <div style="display: flex; gap: 1rem; flex-direction: column;">
+    <div style="text-align: center; background-color: white; border-radius: 2px; margin-top: 10px; padding: 10px;">
+  <h2 style="margin: 0;">Lore</h2>
+  <small><em>Sorted alphabetically by file name.</em></small>
+</div>
+<br/>
+
+
+<div style="display: flex; gap: 1rem; flex-direction: column;">
   
+    
+      <a class="link-card" href="/notes/Religions/The%20Lights/Aleia,%20the%20Hunter.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Aleia, the hunter</h2>
+            
+  <div class="tag notdone">Not Done</div>
+
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+          
+        </div>
+      </a>
     
   
     
@@ -67,41 +132,29 @@
     
   
     
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
+      <a class="link-card" href="/notes/Religions/The%20Lights/Appelyn,%20the%20Traveler.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Appelyn, the traveler</h2>
+            
+  <div class="tag notdone">Not Done</div>
+
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+          
+        </div>
+      </a>
     
   
     
@@ -166,8 +219,60 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+          
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <a class="link-card" href="/notes/Religions/The%20Lights/Solarum,%20the%20golden%20light.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">Solarum, the golden light</h2>
+            
+  <div class="tag notdone">Not Done</div>
+
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -192,8 +297,8 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -204,6 +309,10 @@
           
         </div>
       </a>
+    
+  
+    
+  
     
   
     
@@ -220,8 +329,8 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -232,6 +341,14 @@
           
         </div>
       </a>
+    
+  
+    
+  
+    
+  
+    
+  
     
   
     
@@ -246,8 +363,8 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -258,6 +375,46 @@
           
         </div>
       </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <a class="link-card" href="/notes/Religions/The%20Lights.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h2 style="margin: 0;">The lights</h2>
+            
+  <div class="tag notdone">Not Done</div>
+
+
+          </div>
+          <small>
+            <em>
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
+                
+              </time>
+            </em>
+          </small>
+        </div>
+        <div style="text-align: right">
+          
+          
+        </div>
+      </a>
+    
+  
     
   
     
@@ -272,8 +429,8 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -302,8 +459,8 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -328,122 +485,6 @@
   
     
   
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <a class="link-card" href="/notes/Religions/The%20Lights.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">The lights</h2>
-            
-  <div class="tag notdone">Not Done</div>
-
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-          
-        </div>
-      </a>
-    
-  
-    
-      <a class="link-card" href="/notes/Religions/The%20Lights/Aleia,%20the%20Hunter.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Aleia, the hunter</h2>
-            
-  <div class="tag notdone">Not Done</div>
-
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-          
-        </div>
-      </a>
-    
-  
-    
-      <a class="link-card" href="/notes/Religions/The%20Lights/Appelyn,%20the%20Traveler.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Appelyn, the traveler</h2>
-            
-  <div class="tag notdone">Not Done</div>
-
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-          
-        </div>
-      </a>
-    
-  
-    
-      <a class="link-card" href="/notes/Religions/The%20Lights/Solarum,%20the%20golden%20light.html" style="justify-content: space-between; text-decoration: none; color: black; display: flex; gap: 2rem; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h2 style="margin: 0;">Solarum, the golden light</h2>
-            
-  <div class="tag notdone">Not Done</div>
-
-
-          </div>
-          <small>
-            <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
-                
-              </time>
-            </em>
-          </small>
-        </div>
-        <div style="text-align: right">
-          
-          
-        </div>
-      </a>
     
   
     
@@ -458,8 +499,8 @@
           </div>
           <small>
             <em>
-              <time datetime="2023-06-19T21:03:39+10:00">
-                Last updated on June 19, 2023
+              <time datetime="2023-06-21T11:27:05+10:00">
+                Last updated on June 21, 2023
                 
               </time>
             </em>
@@ -619,6 +660,15 @@
 </script>
 
 
+  <script>
+    const navItems = document.getElementById('nav-items')
+    document.getElementById('nav-trigger').onchange = event => {
+      console.log(event.target.value)
+      navItems.className = event.target.checked
+        ? 'shown'
+        : '';
+    }
+  </script>
 </body>
 
 </html>

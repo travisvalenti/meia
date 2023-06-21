@@ -24,13 +24,47 @@
   <!-- End Jekyll SEO tag -->
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Meia" />
+  <style>
+    #nav-items {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 600px) {
+      .page-content {
+        margin: 0;
+        padding: 0;
+      }
+      #nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 0;
+        height: 0;
+      }
+      #nav-items.shown {
+        width: 100%;
+        height: auto;
+      }
+      #nav-items > .trigger {
+        overflow: hidden;
+        transition: max-height 0.5s ease-out,
+          max-width 0.5s ease-out;  
+        max-height: 0;
+        max-width: 100%;
+      }
+      #nav-items.shown > .trigger {
+        max-height: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header class="site-header" role="banner">
     <div class="wrapper"><a class="site-title" rel="author" href="/">Meia</a>
       <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <input type="checkbox" id="nav-trigger" class="nav-trigger"/>
         <label for="nav-trigger">
           <span class="menu-icon">
             <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -39,7 +73,7 @@
             </svg>
           </span>
         </label>
-        <div style="display: flex; gap: 1rem;">
+        <div id="nav-items">
           <div class="trigger"><a class="page-link" href="/notes">All Notes</a></div>
           <div class="trigger"><a class="page-link" href="/settlements">Settlements</a></div>
           <div class="trigger"><a class="page-link" href="/characters">Characters</a></div>
@@ -50,31 +84,26 @@
     </div>
   </header>
   <main class="page-content" aria-label="Content">
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem">
+    
+
+<div style="text-align: center; background-color: white; border-radius: 2px; margin-top: 10px; padding: 10px;">
+  <h2 style="margin: 0;">All Notes</h2>
+  <small><em>Sorted alphabetically by file name.</em></small>
+</div>
+<br/>
+
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; flex-direction: column;">
   
-    <a class="link-card" href="/notes/Ancestries%20and%20Heritages/Appendix%20of%20Ancestries%20and%20Heritages.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Religions/The%20Lights/Aleia,%20the%20Hunter.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Appendix of ancestries and heritages</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">Aleia, the hunter</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Ancestries%20and%20Heritages/Frost%20Heritages.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Frost heritages</h2>
-          
-  <div class="tag done">Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -89,286 +118,7 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Characters/Alloris.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Alloris</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Character</div>
-
-  <div class="tag">Player</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Characters/Balfor.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Balfor</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Character</div>
-
-  <div class="tag">Player</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Characters/Charles%20Decari.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Sir Charles Decari II</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Character</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Characters/Jorgen%20Jorgenson.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Jorgen Jorgenson</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Character</div>
-
-  <div class="tag">Player</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Characters/Kaihura.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Kaihura</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Character</div>
-
-  <div class="tag">Player</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Characters/Kitharen%20Bloodclan.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Ki’tharen of the Blood Clan</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Characters/Prevon%20Bullwinkle.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Prevon Bullwinkle</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Character</div>
-
-  <div class="tag">Player</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Characters/Trovious%20the%20Mysterious.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Trovious the Mysterious</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Character</div>
-
-  <div class="tag">Player</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Currencies%20and%20Commodities.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Currencies and Commodities</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Games/One-Shots/An%20Order%20of%20Uacrin.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">An order of uacrin</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">todo</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Games/One-Shots/Eau%20Savoir.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Eau savoir</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Games/One-Shots/The%20Corruption%20of%20Trax.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The corruption of trax</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Games/One-Shots/The%20Disappearance%20of%20Kesserhollow.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The Dissapearance of Kesserhollow</h2>
-          
-  <div class="tag done">Done</div>
-
-
-  <div class="tag">Adventure</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Games/One-Shots/The%20Forest%20is%20not%20a%20safe%20place.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The forest is not a safe place</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Games/One-Shots/The%20Tenebrus.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The tenebrus</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Generic%20TODOs.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Generic todos</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Holidays%20and%20Celebrations.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Holidays and celebrations</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Lore</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Aramir/Aramir.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Aramir</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Locations%20of%20Myth%20and%20Legend.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Locations of myth and legend</h2>
-          
-  <div class="tag done">Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -385,220 +135,7 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/Delastrin%20Range/Delastrin%20Range.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Delastrin range</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/Delastrin%20Range/Keel%20Narrock.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Keel Narrock</h2>
-          
-  <div class="tag done">Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/Northern%20Meia.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Northern meia</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/Sul%20Le%20Vyre/Sul%20Le%20Vyre.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Sul le vyre</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Eversteel.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Eversteel</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Iron%20City.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Iron city</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">stub</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Itar.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Itar</h2>
-          
-  <div class="tag done">Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Kesserhollow.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Kesserhollow</h2>
-          
-  <div class="tag done">Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/The%20Iron%20Empire.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The Iron Empire</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">stub</div>
-
-  <div class="tag">todo</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Tullamore.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Tullamore</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/Manahelm.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Manahelm</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/Tallowbrook.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Tallowbrook</h2>
-          
-  <div class="tag done">Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/The%20Kindom%20of%20Mana.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The Kingdom of Mana</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Terrace.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The terrace</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/Northern%20Meia/Vil%20Taroth/Ember%20Hills.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Ember Hills</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">Settlement</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -611,63 +148,91 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Locations/Seberus/Seberus.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Characters/Alloris.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Seberus</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">Alloris</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Character</div>
+
+  <div class="tag">Player</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Materials%20and%20Resources/Aloe.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Aloe</h2>
+          
+  <div class="tag done">Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Games/One-Shots/An%20Order%20of%20Uacrin.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">An order of uacrin</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">todo</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Religions/The%20Lights/Appelyn,%20the%20Traveler.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Appelyn, the traveler</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Locations/The%20Dry%20Sea/Khai-hoteph.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Ancestries%20and%20Heritages/Appendix%20of%20Ancestries%20and%20Heritages.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Khai Hoteph</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">Appendix of ancestries and heritages</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Locations/The%20Dry%20Sea/Qalb%20Alsahra.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Locations/Aramir/Aramir.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Qalb Alsahra</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">Aramir</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
-  <div class="tag">stub</div>
-
         </div>
         <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/The%20Dry%20Sea/The%20Dry%20Sea.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The dry sea</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">stub</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -684,48 +249,39 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Locations/The%20Flatlands/Lake%20Siyah.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Characters/Balfor.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Lake siyah</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">Balfor</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
+  <div class="tag">Character</div>
+
+  <div class="tag">Player</div>
+
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Locations/The%20Flatlands/The%20Flatlands.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Characters/Charles%20Decari.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The flatlands</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">Sir Charles Decari II</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/The%20Meian%20Sea.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The meian sea</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">stub</div>
+  <div class="tag">Character</div>
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -740,39 +296,134 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Locations/The%20West%20Ocean/The%20Isle%20of%20Wyrm.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Currencies%20and%20Commodities.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The Isle of Wyrm</h2>
-          
-  <div class="tag done">Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Locations/The%20West%20Ocean/The%20West%20Ocean.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The west ocean</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">Currencies and Commodities</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Locations/West%20Ocean.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/Delastrin%20Range/Delastrin%20Range.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">West ocean</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">Delastrin range</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Games/One-Shots/Eau%20Savoir.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Eau savoir</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Materials%20and%20Resources/Ember%20Flower.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Ember flower</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/Vil%20Taroth/Ember%20Hills.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Ember Hills</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Eversteel.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Eversteel</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Ancestries%20and%20Heritages/Frost%20Heritages.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Frost heritages</h2>
+          
+  <div class="tag done">Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Generic%20TODOs.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Generic todos</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Holidays%20and%20Celebrations.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Holidays and celebrations</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Lore</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Iron%20City.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Iron city</h2>
           
   <div class="tag notdone">Not Done</div>
 
@@ -781,7 +432,138 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Materials%20and%20Resources/Iron,%20Steel%20and%20Bronze.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Iron, steel and bronze</h2>
+          
+  <div class="tag done">Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Itar.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Itar</h2>
+          
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Characters/Jorgen%20Jorgenson.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Jorgen Jorgenson</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Character</div>
+
+  <div class="tag">Player</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Characters/Kaihura.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Kaihura</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Character</div>
+
+  <div class="tag">Player</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/Delastrin%20Range/Keel%20Narrock.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Keel Narrock</h2>
+          
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Kesserhollow.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Kesserhollow</h2>
+          
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/The%20Dry%20Sea/Khai-hoteph.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Khai Hoteph</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Characters/Kitharen%20Bloodclan.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Ki’tharen of the Blood Clan</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/The%20Flatlands/Lake%20Siyah.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Lake siyah</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -794,7 +576,197 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Locations%20of%20Myth%20and%20Legend.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Locations of myth and legend</h2>
+          
+  <div class="tag done">Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/Manahelm.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Manahelm</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Meia%20Map.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Meia map</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Natural%20Events.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Natural events</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Materials%20and%20Resources/Nitre%20&%20Black%20Powder.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Nitre & black powder</h2>
+          
+  <div class="tag done">Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Non-spoiler%20game%20list.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Non Spoiler game list</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Northern%20Meia%20Map.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Northern meia map</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/Northern%20Meia.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Northern meia</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Overview.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Overview</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Pets.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Pets</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Characters/Prevon%20Bullwinkle.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Prevon Bullwinkle</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Character</div>
+
+  <div class="tag">Player</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/The%20Dry%20Sea/Qalb%20Alsahra.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Qalb Alsahra</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">stub</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Seberus/Seberus.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Seberus</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Religions/The%20Lights/Solarum,%20the%20golden%20light.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Solarum, the golden light</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -807,7 +779,35 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/Sul%20Le%20Vyre/Sul%20Le%20Vyre.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Sul le vyre</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/Tallowbrook.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Tallowbrook</h2>
+          
+  <div class="tag done">Done</div>
+
+
+  <div class="tag">Settlement</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -822,206 +822,35 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Lore/The%20Elves.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Games/One-Shots/The%20Corruption%20of%20Trax.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The elves</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">The corruption of trax</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Lore/The%20Origin%20of%20the%20World.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Games/One-Shots/The%20Disappearance%20of%20Kesserhollow.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The origin of the world</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Lore/The%20Silent%20Whisper.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The silent whisper</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">stub</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Lore/The%20Sleeping%20Leviathans.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">The sleeping leviathans</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-  <div class="tag">stub</div>
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Materials%20and%20Resources/Aloe.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Aloe</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">The Dissapearance of Kesserhollow</h2>
           
   <div class="tag done">Done</div>
 
 
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Materials%20and%20Resources/Ember%20Flower.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Ember flower</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
+  <div class="tag">Adventure</div>
 
         </div>
         <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Materials%20and%20Resources/Iron,%20Steel%20and%20Bronze.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Iron, steel and bronze</h2>
-          
-  <div class="tag done">Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Materials%20and%20Resources/Nitre%20&%20Black%20Powder.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Nitre & black powder</h2>
-          
-  <div class="tag done">Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Materials%20and%20Resources/Uacrin.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Uacrin</h2>
-          
-  <div class="tag done">Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Meia%20Map.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Meia map</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Natural%20Events.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Natural events</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Non-spoiler%20game%20list.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Non Spoiler game list</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Northern%20Meia%20Map.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Northern meia map</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Overview.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Overview</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
-        </em>
-    </a>
-  
-    <a class="link-card" href="/notes/Pets.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Pets</h2>
-          
-  <div class="tag notdone">Not Done</div>
-
-
-        </div>
-        <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -1038,7 +867,61 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/The%20Dry%20Sea/The%20Dry%20Sea.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The dry sea</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">stub</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Lore/The%20Elves.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The elves</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/The%20Flatlands/The%20Flatlands.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The flatlands</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Games/One-Shots/The%20Forest%20is%20not%20a%20safe%20place.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The forest is not a safe place</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -1055,7 +938,50 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/The%20Iron%20Empire.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The Iron Empire</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">stub</div>
+
+  <div class="tag">todo</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/The%20West%20Ocean/The%20Isle%20of%20Wyrm.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The Isle of Wyrm</h2>
+          
+  <div class="tag done">Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Kindom%20of%20Mana/The%20Kindom%20of%20Mana.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The Kingdom of Mana</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -1068,59 +994,104 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Religions/The%20Lights/Aleia,%20the%20Hunter.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Locations/The%20Meian%20Sea.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Aleia, the hunter</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">The meian sea</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">stub</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Lore/The%20Origin%20of%20the%20World.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The origin of the world</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Religions/The%20Lights/Appelyn,%20the%20Traveler.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Lore/The%20Silent%20Whisper.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Appelyn, the traveler</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">The silent whisper</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">stub</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Lore/The%20Sleeping%20Leviathans.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The sleeping leviathans</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">stub</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Games/One-Shots/The%20Tenebrus.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">The tenebrus</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Religions/The%20Lights/Solarum,%20the%20golden%20light.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Terrace.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Solarum, the golden light</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">The terrace</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
-    <a class="link-card" href="/notes/Religions/The%20Lights/Valia,%20Vesille%20and%20Vyre.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+    <a class="link-card" href="/notes/Locations/The%20West%20Ocean/The%20West%20Ocean.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <h2 style="margin-bottom: 0.5rem; color: black;">Valia, vesille and vyre</h2>
+          <h2 style="margin-bottom: 0.5rem; color: black;">The west ocean</h2>
           
   <div class="tag notdone">Not Done</div>
 
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -1135,7 +1106,78 @@
 
         </div>
         <em>
-          Last modified May 8, 2023
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Characters/Trovious%20the%20Mysterious.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Trovious the Mysterious</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">Character</div>
+
+  <div class="tag">Player</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/Northern%20Meia/The%20Iron%20Empire/Tullamore.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Tullamore</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Materials%20and%20Resources/Uacrin.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Uacrin</h2>
+          
+  <div class="tag done">Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Religions/The%20Lights/Valia,%20Vesille%20and%20Vyre.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">Valia, vesille and vyre</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+        </div>
+        <em>
+          Last modified June 21, 2023
+        </em>
+    </a>
+  
+    <a class="link-card" href="/notes/Locations/West%20Ocean.html" style="text-decoration: none; color: black; background: #fffe; border-radius: 2px; padding: 1rem;" >
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <h2 style="margin-bottom: 0.5rem; color: black;">West ocean</h2>
+          
+  <div class="tag notdone">Not Done</div>
+
+
+  <div class="tag">stub</div>
+
+        </div>
+        <em>
+          Last modified June 21, 2023
         </em>
     </a>
   
@@ -1284,6 +1326,15 @@
 </script>
 
 
+  <script>
+    const navItems = document.getElementById('nav-items')
+    document.getElementById('nav-trigger').onchange = event => {
+      console.log(event.target.value)
+      navItems.className = event.target.checked
+        ? 'shown'
+        : '';
+    }
+  </script>
 </body>
 
 </html>
