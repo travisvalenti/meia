@@ -93,11 +93,13 @@
   <div class="tag notdone">Not Done</div>
 
 
+  <div class="tag">todo</div>
+
       </div>
       <small>
         <em>
-          <time datetime="2023-05-04T16:46:20+10:00">
-            Last updated on May 4, 2023
+          <time datetime="2023-06-21T16:35:35+10:00">
+            Last updated on June 21, 2023
             
           </time>
         </em>
@@ -105,14 +107,93 @@
     </div>
     <div>
    <content>
-      <h1 id="allelwyn">Allelwyn</h1>
+      <span id="demographics" style="display: none;"></span>
+<div style="overflow-x: auto">
+  <table>
+    <tbody>
+    
+  
+    
+    
+    
+  </tbody>
+  </table>
+</div>
+
 <p>Allelwyn, which translates roughly to <em>The First East</em>, is a city on the Western edge of the Seberus Peninsula. It is the oldest elven city not on the island of Aramir, and is a major hub for trade in the region.</p>
 
 <p>Those wishing to trade with the island of Aramir usually do so through Allelwyn port. Due to historical treaties and customs, tax is not applied for this through-trade.</p>
 
 <h2 id="notable-locations">Notable Locations</h2>
 
+<h3 id="the-church-of-sorrows">The Church of Sorrows</h3>
 
+<p>The Church of Sorrows is an enourmous Cathedral constructed of basalt and mahogony that sits on the shores next to
+Allelwyn. It was constructed as a place of rememberance for the elves that died in the years after leaving
+Aramir, and the elves that were left behind in the old realm.</p>
+
+<p>The church’s crypt descends hundreds of feet below the ground, and is rumored to contain an entrance to <a class="internal-link" href="/notes/Lore/The%20Underdark.html">The Underdark</a>.</p>
+
+
+
+<script>
+  var demographics = document.getElementById('demographics').innerText
+  var graph = document.getElementById('demographic-graph')
+  console.log(demographics.split(', '))
+  demographics.split(', ').forEach((demographic, index) => {
+    const name = demographic.split(' ')[0]
+    const percentage = demographic.split(' ')[1]
+
+    const div = document.createElement('div')
+    div.id = `demographic_${index}`
+    div.classList = [`demographic-segment`]
+    div.style.width = percentage;
+    div.innerText = demographic;
+    div.title = demographic;
+    graph.append(div)
+  })
+</script>
+
+<style>
+  #demographic-graph {
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    min-width: 20rem;
+    display: flex;
+    overflow: hidden;
+  }
+  .demographic-segment {
+    height: 1rem;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #00000099;
+  }
+  #demographic_0 {
+    background-color: #AFF8DB;
+  }
+  #demographic_1 {
+    background-color: #85E3FF;
+  }
+  #demographic_2 {
+    background-color: #FFABAB;
+  }
+  #demographic_3 {
+    background-color: #B28DFF;
+  }
+  #demographic_4 {
+    background-color: #AFF8DB;
+  }
+  #demographic_5 {
+    background-color: #85E3FF;
+  }
+  #demographic_6 {
+    background-color: #FFABAB;
+  }
+  #demographic_7 {
+    background-color: #B28DFF;
+  }
+</style>
     </content>
     </div>
   </article>
@@ -132,8 +213,14 @@
       
       <div class="backlink-box">
         <a class="internal-link"
-          href="/notes/Games/One-Shots/An%20Order%20of%20Uacrin.html">An order of uacrin</a><br>
+          href="/notes/Games/One-Shots/2022/An%20Order%20of%20Uacrin.html">An order of uacrin</a><br>
         <div style="font-size: 0.9em">A one-shot run during the winter of 2022 leading up to the events of the breaking of the pact of...</div>
+      </div>
+      
+      <div class="backlink-box">
+        <a class="internal-link"
+          href="/notes/Lore/The%20Underdark.html">The underdark</a><br>
+        <div style="font-size: 0.9em">Whilst many arcanists insist that The Underdark is simply another plane, possibly part of the elemental plane of earth, accessible...</div>
       </div>
       
     </div>

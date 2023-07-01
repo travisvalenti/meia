@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>West ocean - Meia</title>
+  <title>Harper Falls - Meia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
   <meta name="generator" content="Jekyll v4.3.2" />
   <meta property="og:title" content="Meia" />
@@ -88,18 +88,18 @@
   <article style="padding: 1rem; background: #ffffffee; max-width: 900px;">
     <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 1rem;">
       <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <h1 style="margin-bottom: 0.5rem;">West ocean</h1>
+        <h1 style="margin-bottom: 0.5rem;">Harper Falls</h1>
         
   <div class="tag notdone">Not Done</div>
 
 
-  <div class="tag">stub</div>
+  <div class="tag">Settlement</div>
 
       </div>
       <small>
         <em>
-          <time datetime="2023-05-16T18:20:11+10:00">
-            Last updated on May 16, 2023
+          <time datetime="2023-07-01T14:03:53+10:00">
+            Last updated on July 1, 2023
             
           </time>
         </em>
@@ -107,12 +107,107 @@
     </div>
     <div>
    <content>
-      <h1 id="west-ocean">West Ocean</h1>
+      <span id="demographics" style="display: none;">Human 45%, Elf 20%, Dwarf 30%, Other 5%</span>
+<div style="overflow-x: auto">
+  <table>
+    <tbody>
+    
+    <tr>
+      <td>Population</td>
+      <td>5500</td>
+    </tr>
+    
+  
+    
+    <tr>
+      <td>Demographics</td>
+      <td>
+        <div id="demographic-graph">
+        </div>
+      </td>
+    </tr>
+    
+    
+    
+    <tr>
+      <td>Region</td>
+      <td>The Kingdom of Mana</td>
+    </tr>
+    
+  </tbody>
+  </table>
+</div>
 
-<p>The West Ocean is an area to the West of <a class="internal-link" href="/notes/Locations/The%20Meian%20Sea.html">The Meian Sea</a> where the waters are deeper and the travels more dangerous.</p>
+<p>Harper Falls is a small city located in the North-East of The Kingdom of Mana. It is a hub city for dozens of
+small faring towns, and a common traveller’s rest for those heading North through to The Iron Empire.</p>
 
-<p>The West Ocean refers to the deepest sections of the ocean between the continents, and is generally perilous to traverse.</p>
+<p>It is located next to a waterfall which connects the North and South sections of Lake Eterel, and is a popular destination for those with the means to take vacations.</p>
 
+<h2 id="notable-locations">Notable Locations</h2>
+<h3 id="the-gilded-feather">The Gilded Feather</h3>
+<p>The Gilded Feather is a resort run by an Aasimar by the name of Aldure Seraph.
+Aldure also offers beds and food for those who cannot afford it.</p>
+
+
+
+<script>
+  var demographics = document.getElementById('demographics').innerText
+  var graph = document.getElementById('demographic-graph')
+  console.log(demographics.split(', '))
+  demographics.split(', ').forEach((demographic, index) => {
+    const name = demographic.split(' ')[0]
+    const percentage = demographic.split(' ')[1]
+
+    const div = document.createElement('div')
+    div.id = `demographic_${index}`
+    div.classList = [`demographic-segment`]
+    div.style.width = percentage;
+    div.innerText = demographic;
+    div.title = demographic;
+    graph.append(div)
+  })
+</script>
+
+<style>
+  #demographic-graph {
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    min-width: 20rem;
+    display: flex;
+    overflow: hidden;
+  }
+  .demographic-segment {
+    height: 1rem;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #00000099;
+  }
+  #demographic_0 {
+    background-color: #AFF8DB;
+  }
+  #demographic_1 {
+    background-color: #85E3FF;
+  }
+  #demographic_2 {
+    background-color: #FFABAB;
+  }
+  #demographic_3 {
+    background-color: #B28DFF;
+  }
+  #demographic_4 {
+    background-color: #AFF8DB;
+  }
+  #demographic_5 {
+    background-color: #85E3FF;
+  }
+  #demographic_6 {
+    background-color: #FFABAB;
+  }
+  #demographic_7 {
+    background-color: #B28DFF;
+  }
+</style>
     </content>
     </div>
   </article>
@@ -125,10 +220,8 @@
       
       <div class="backlink-box">
         <a class="internal-link"
-          href="/notes/Games/One-Shots/2022/The%20Tenebrus.html">The tenebrus</a><br>
-        <div style="font-size: 0.9em">The Tenebrus
-2022-07-02 12:00 @ 73/117 Pacific Hwy, Hornsby, 2077
-</div>
+          href="/notes/Games/One-Shots/2023/The%20river%20is%20not%20a%20safe%20place.html">The River is Not a Safe Place</a><br>
+        <div style="font-size: 0.9em">This adventure is the sequel to ‘The forest is not a safe place’ (Tallowbrook), in which a small troop of...</div>
       </div>
       
     </div>
