@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tutorial Bear - Meia</title>
+  <title>Thunderwharf - Meia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
   <meta name="generator" content="Jekyll v4.3.2" />
   <meta property="og:title" content="Meia" />
@@ -88,18 +88,18 @@
   <article style="padding: 1rem; background: #ffffffee; max-width: 900px;">
     <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 1rem;">
       <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <h1 style="margin-bottom: 0.5rem;">Tutorial Bear</h1>
+        <h1 style="margin-bottom: 0.5rem;">Thunderwharf</h1>
         
   <div class="tag notdone">Not Done</div>
 
 
-  <div class="tag">Adventure</div>
+  <div class="tag">Settlement</div>
 
       </div>
       <small>
         <em>
-          <time datetime="2023-07-09T12:09:41+10:00">
-            Last updated on July 9, 2023
+          <time datetime="2023-08-23T21:53:54+10:00">
+            Last updated on August 23, 2023
             
           </time>
         </em>
@@ -107,9 +107,113 @@
     </div>
     <div>
    <content>
-      <h2 id="what-is-tutorial-bear">What is tutorial bear?</h2>
-<p>Tutorial Bear is a day where a bunch of new players come together and try out Pathfinder 2e by creating one or more characters and testing them by fighting against a bear.</p>
+      <span id="demographics" style="display: none;">Human 40%, Elf 15%, Dwarf 20%, Other 5%</span>
+<div style="overflow-x: auto">
+  <table>
+    <tbody>
+    
+    <tr>
+      <td>Population</td>
+      <td>21000</td>
+    </tr>
+    
+  
+    
+    <tr>
+      <td>Demographics</td>
+      <td>
+        <div id="demographic-graph">
+        </div>
+      </td>
+    </tr>
+    
+    
+    
+    <tr>
+      <td>Region</td>
+      <td>The Kingdom of Mana</td>
+    </tr>
+    
+  </tbody>
+  </table>
+</div>
 
+<p>Thunderwharf is a large city located at the convergence of the North Tar and South Tar rivers, where they run into Deep Lake.</p>
+
+<p>Thunderwharf is known for it’s large waterfalls with giant wooden cranes that transport boats and cargo from one side of the falls to the other.</p>
+
+<p>Thunderwharf is also an administration hub, hosting the second largest noble population of any Manan city, second only to Manahelm.</p>
+
+<h2 id="notable-locations">Notable Locations</h2>
+<h3 id="the-falls">The Falls</h3>
+<p>The falls of Thunderwharf are famous around the world, known for their beauty and power.
+The falls are used as a source of power for the city, notably powering giant cranes that move boats up and down the falls. The large amount of mechanical power created from the falls makes Thunderwharf a common emmigration destination for craftsmen of all sorts, especially Dwarves from the Keel cities, who are accustomed to mechanical tools.</p>
+
+<h3 id="breakwater-prison">Breakwater Prison</h3>
+<p>Breakwater Prison is located in a set of tunnels accessible from the low side of the falls. It is not certain who or what created the tunnels, but they contain long passages with small alcoves on either side. The Manan governement installed iron bars in the majority of these alcoves, to house prisoners.</p>
+
+<p>Breakwater Prison is the highest security prison in Northern Meia, and has numerous specialist wards for magic users, elementals, and sentient monsters.</p>
+
+
+
+<script>
+  var demographics = document.getElementById('demographics').innerText
+  var graph = document.getElementById('demographic-graph')
+  console.log(demographics.split(', '))
+  demographics.split(', ').forEach((demographic, index) => {
+    const name = demographic.split(' ')[0]
+    const percentage = demographic.split(' ')[1]
+
+    const div = document.createElement('div')
+    div.id = `demographic_${index}`
+    div.classList = [`demographic-segment`]
+    div.style.width = percentage;
+    div.innerText = demographic;
+    div.title = demographic;
+    graph.append(div)
+  })
+</script>
+
+<style>
+  #demographic-graph {
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    min-width: 20rem;
+    display: flex;
+    overflow: hidden;
+  }
+  .demographic-segment {
+    height: 1rem;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #00000099;
+  }
+  #demographic_0 {
+    background-color: #AFF8DB;
+  }
+  #demographic_1 {
+    background-color: #85E3FF;
+  }
+  #demographic_2 {
+    background-color: #FFABAB;
+  }
+  #demographic_3 {
+    background-color: #B28DFF;
+  }
+  #demographic_4 {
+    background-color: #AFF8DB;
+  }
+  #demographic_5 {
+    background-color: #85E3FF;
+  }
+  #demographic_6 {
+    background-color: #FFABAB;
+  }
+  #demographic_7 {
+    background-color: #B28DFF;
+  }
+</style>
     </content>
     </div>
   </article>
@@ -118,11 +222,26 @@
   <side style="background: #ffffffee; padding: 1rem 2rem; border-radius: 2px; width: 20rem;">
     <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
     
-
-    <div style="font-size: 0.9em">
-      <p>
-        There are no notes linking to this note.
-      </p>
+    <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
+      
+      <div class="backlink-box">
+        <a class="internal-link"
+          href="/notes/Games/2022/An%20Order%20of%20Uacrin.html">An order of uacrin</a><br>
+        <div style="font-size: 0.9em">A one-shot run during the winter of 2022 leading up to the events of the breaking of the pact of...</div>
+      </div>
+      
+      <div class="backlink-box">
+        <a class="internal-link"
+          href="/notes/Games/2023/Old%20Timey%20Medicine.html">Old Timey Medicine</a><br>
+        <div style="font-size: 0.9em">A group of psychics have been going around town “healing” people. They end up worse off than they started. Find...</div>
+      </div>
+      
+      <div class="backlink-box">
+        <a class="internal-link"
+          href="/notes/Games/2023/The%20river%20is%20not%20a%20safe%20place.html">The River is Not a Safe Place</a><br>
+        <div style="font-size: 0.9em">This adventure is the sequel to ‘The forest is not a safe place’ (Tallowbrook), in which a small troop of...</div>
+      </div>
+      
     </div>
     
   </side>
